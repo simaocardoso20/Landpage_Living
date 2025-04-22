@@ -1,7 +1,7 @@
 .container {
   display: flex;
   flex-direction: column;
-  align-items: center; /* centra o conteúdo horizontalmente */
+  align-items: center; /* centrar o conteúdo horizontalmente */
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
@@ -18,7 +18,7 @@ a {
   position: relative;
   width: 1440px;
   height: 1024px;
-  margin: 0 auto; /* centra horizontalmente */
+  margin: 0 auto; /* centrar horizontalmente */
   overflow: hidden;
   background: rgba(0, 0, 0, 0.55);
   }
@@ -30,7 +30,7 @@ a {
     left: 0;
     width: 1440px;
     height: 1024px;
-    object-fit: fill; /* garante que a imagem ocupa exatamente as dimensões */
+    object-fit: fill; /* imagem ocupa exatamente as dimensões */
     z-index: -1;
     display: block;
     border-radius: 0 !important;
@@ -38,7 +38,7 @@ a {
   
   /* Navbar sobre a imagem */
   .navbar-custom {
-    position: relative; /* ou absolute se quiseres fixa no topo */
+    position: relative;
     z-index: 2;
     background-color: transparent !important;
     padding: 15px 30px;
@@ -47,7 +47,7 @@ a {
     letter-spacing: 0;
     right: 55px;
     top: 50px;
-    font-family: 'josephin slab';
+    font-family: 'Josefin Slab', sans-serif;
   }
 
   .navbar-nav .nav-item {
@@ -186,6 +186,8 @@ height: 161px;
   padding: 20px;
   border-radius: 35px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0;
 }
 
 .popup-content {
