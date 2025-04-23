@@ -1,53 +1,40 @@
-/* Página completa */
-.page-locais {
-  position: relative;
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centrar o conteúdo horizontalmente */
   width: 100%;
   max-width: 1440px;
-  height: 100vh;
+  margin: 0 auto;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+  
+  /* Página completa */
+  .page-locais {
+  position: relative;
+  width: 1440px;
+  height: 1024px;
+  margin: 0 auto; /* centrar horizontalmente */
   overflow: hidden;
   background: rgba(0, 0, 0, 0.55);
-}
+  }
 
-body {
-  display: flex;
-  justify-content: center; /* Centra horizontalmente */
-  align-items: center; /* Centra verticalmente */
-  height: 100vh; /* Define altura mínima para o body ocupar 100% da altura da tela */
-  margin: 0; /* Remove qualquer margem padrão do body */
-}
-
-.select-container {
-  position: relative;
-  width: 100%;
-}
-
-select {
-  width: 100%;
-  height: 50px;
-  padding: 8px;
-  border-radius: 15px;
-  border: 1px solid #ccc;
-  font-family: 'Jura', sans-serif;
-  font-weight: 700;
-  font-size: 20px;
-}
-
-.form-select label:last-child {
-  display: none;
-}
-
-/* Imagem de fundo */
-.imagem-page-locais {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* A imagem ocupa a tela toda */
-  z-index: -1;
-  display: block;
-  border-radius: 0 !important;
-}
+  /* Imagem de fundo */
+  .imagem-page-locais {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1440px;
+    height: 1024px;
+    object-fit: fill; /* imagem ocupa exatamente as dimensões */
+    z-index: -1;
+    display: block;
+    border-radius: 0 !important;
+  }
 
 /* Navbar sobre a imagem */
 .navbar-custom {
@@ -59,8 +46,10 @@ select {
   right: 210px;
   padding: 15px 30px;
   font-size: 25px;
+  font-weight: 700;
   font-family: 'Josefin Slab', sans-serif;
   z-index: 2;
+  color: rgba(255, 255, 255, 1);
 }
 
 /* Contêiner da navbar (contém os links e o logo) */
