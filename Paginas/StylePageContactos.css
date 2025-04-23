@@ -1,0 +1,234 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centrar o conteúdo horizontalmente */
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+  
+  /* Página completa */
+  .page-contactos {
+  position: relative;
+  width: 1440px;
+  height: 1024px;
+  margin: 0 auto; /* centrar horizontalmente */
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.55);
+  }
+
+  /* Imagem de fundo */
+  .imagem-page-contactos {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1440px;
+    height: 1024px;
+    object-fit: fill; /* imagem ocupa exatamente as dimensões */
+    z-index: -1;
+    display: block;
+    border-radius: 0 !important;
+  }
+  
+  /* Navbar sobre a imagem */
+  .navbar-custom {
+    position: relative;
+    z-index: 2;
+    background-color: transparent !important;
+    padding: 15px 30px;
+    font-size: 25px;
+    line-height: 100%;
+    letter-spacing: 0;
+    right: 55px;
+    top: 50px;
+    font-family: 'Josefin Slab', sans-serif;
+  }
+
+  .navbar-nav .nav-item {
+    margin-right: 40px; /* aumenta o espaço entre os itens */
+  }
+
+.navbar-nav .nav-item:last-child {
+    margin-right: 0;
+  }
+
+.navbar .nav-link {
+  color: rgb(255, 255, 255, 1);
+}
+
+.disabled-link {
+  pointer-events: none;
+  cursor: default;
+  color: rgba(255, 255, 255, 1);
+}
+  
+  /* Texto ao centro */
+  .texto-page-contactos {
+    position: absolute;
+    top: 33%;
+    right: 100px; /* distância do lado direito */
+    transform: translateY(-50%); /* apenas centra verticalmente */
+    z-index: 1;
+    color: rgb(255, 255, 255, 1);
+    text-align: center; /* alinha o texto à direita */
+    font-size: 25px;
+    line-height: 70%;
+    font-family: Jura;
+    font-weight: 700;
+    letter-spacing: 0%;
+}
+
+  /* Texto autor */
+  .texto-autor{
+  position: absolute;
+  top: 40%;
+  right: 90px; /* distância do lado direito */
+  transform: translateY(-50%); /* apenas centra verticalmente */
+  z-index: 1;
+  font-family: Jura;
+  font-size: 20px;
+  line-height: 118%;
+  letter-spacing: 0%;
+  font-weight: 700;
+  color: rgb(255, 255, 255, 1);
+}
+
+  /* Icon barras */
+.icon-barras {
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 0px; /* distancia do fundo */
+  left: 120px; /* distancia da direita */
+  width: 59px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Formulário */
+.form-wrapper {
+  position: absolute;
+  top: 207px;
+  left: 187px;
+  width: 420px;
+  height: 700px;
+  border-radius: 30px;
+  background-color: rgba(0, 0, 0, 1);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  font-family: Jura;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 118%;
+  letter-spacing: 0%;
+  color: rgba(255, 255, 255, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-altura,
+.input-altura-mensagem {
+  width: 338px;
+  border-radius: 15px;
+}
+
+.input-altura {
+height: 76px;
+}
+
+.input-altura-mensagem {
+height: 161px; 
+}
+
+/* Botão enviar */
+.rectangle10 {
+  width: 338;
+  height: 76;
+  left: 254px;
+  border-radius: 40px;
+  border-width: 3px;
+  border: 3px solid rgba(255, 255, 255, 1);
+  margin-top: 40px;
+  line-height: 76px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;     /* centra verticalmente */
+  justify-content: center;
+  font-family: Jura;
+  padding: 0 130px;  
+}
+
+/* Pop-up de Sucesso */
+.alert-form {
+  display: none; /* Inicialmente oculto */
+  position: fixed;
+  top: 70px; /* ou 0, se quiser colado ao topo */
+  left: 49.3%;
+  transform: translateX(-50%);
+  width: 741px;
+  height: 175px;
+  background: rgba(255, 255, 255, 1);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 35px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0;
+}
+
+.popup-content {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+}
+
+.popup-content p {
+  font-family: Jura;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 118%;
+  letter-spacing: 0%;
+  display: flex;              
+  flex-direction: column;     
+  align-items: center;
+
+}
+
+.close-btn {
+  width: 270px; /* largura fixa */
+  height: 60px; /* altura maior */
+  font-size: 16px;
+  background-color: rgba(97, 178, 245, 1);
+  border: none;
+  border-radius: 30px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: Jura;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 118%;
+  letter-spacing: 0%;
+  margin: 20px auto 0 auto;
+}
+
+
+
+
+
+
