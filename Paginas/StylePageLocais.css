@@ -75,6 +75,7 @@ a {
   justify-content: space-between; /* Divide a navbar entre a esquerda e a direita */
   align-items: center;
   position: fixed;
+  top: 40px;
 }
 
 .icon-barras-img {
@@ -96,12 +97,13 @@ a {
 .form-select {
   position: absolute;
   top: 200px;
-  left: 130px;
-  width: 450px;
+  left: 122px;
+  width: 466px;
   height: 600px;
   border-radius: 35px;
   background-color: rgba(217, 217, 217, 1);
   padding: 30px;
+  border-radius: 20px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
   font-family: Jura;
   font-weight: 700;
@@ -111,44 +113,50 @@ a {
   color: rgba(255, 255, 255, 1);
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  text-align: center;
   align-items: center;
-  text-align: left;
 }
 
-.form-select label {
-  display: block;
-  margin-bottom: 10px;
-  color: rgba(30, 30, 30, 1);
-  font-family: 'jura';
-  font-weight: 700;
+/* Alinha os grupos de form no centro */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza cada conjunto de label e select */
+  margin-top: 30px;
+}
+
+/* Label */
+.form-titulo-label {
+  font-family: 'jura', sans-serif;
   font-size: 25px;
+  font-weight: 700;
   line-height: 118%;
-  letter-spacing: 0;
-  text-align: left;
+  color: rgba(30, 30, 30, 1);
+  margin-bottom: 5px;
+  text-align: left; /* Garante que o texto do label fique centralizado */
   width: 100%;
-  padding-left: 25px;
+  padding-left: 0;
+  margin-left: 0;
+  margin-top: 0;
 }
 
+/* Select */
 .form-select select {
-  width: 345px;
+  width: 345px; 
   height: 76px;
-  padding: 8px;
-  margin-bottom: 15px;
+  padding-left: 10px;
   border-radius: 15px;
   border: 1px solid #ccc;
-  color: rgba(30, 30, 30, 1);
-  font-family: 'jura';
-  font-weight: 700;
   font-size: 25px;
+  font-weight: 700;
   line-height: 118%;
-  letter-spacing: 0;
-  padding-left: 10px;
+  color: rgba(30, 30, 30, 1);
+  font-family: 'Jura', sans-serif;
+  margin: 0 auto; /* Centraliza o select dentro do formulário */
 }
 
-.form-select button {
-  padding: 8px 16px;
+/* Botão */
+.retangulo20 {
+  padding: 20px 20px;
   background-color: rgba(104, 105, 49, 1);
   color: rgba(30, 30, 30, 1);
   border: none;
@@ -156,15 +164,13 @@ a {
   cursor: pointer;
   height: 76px;
   width: 345px;
-  font-family: 'jura';
-  font-weight: 700;
   font-size: 25px;
+  font-weight: 700;
   line-height: 118%;
-  letter-spacing: 0;
+  font-family: 'Jura';
+  margin: 0 auto; /* Centraliza o botão */
+  align-items: center;
+  text-align: center;
+  margin: 20px auto 0;
+  margin-top: 60px;
 }
-
-.input-altura {
-  width: 345px;
-  height: 76px;
-  border-radius: 15px;
-  }

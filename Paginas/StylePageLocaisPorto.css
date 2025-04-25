@@ -1,0 +1,189 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* centrar o conteúdo horizontalmente */
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+    
+    /* Página completa */
+    .page-locais {
+    position: relative;
+    width: 1440px;
+    height: 1024px;
+    margin: 0 auto; /* centrar horizontalmente */
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.55);
+    }
+  
+    /* Imagem de fundo */
+    .imagem-page-locais {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1440px;
+      height: 1024px;
+      object-fit: fill; /* imagem ocupa exatamente as dimensões */
+      z-index: -1;
+      display: block;
+      border-radius: 0 !important;
+    }
+  
+  /* Navbar sobre a imagem */
+  .navbar-custom {
+    display: flex;
+    justify-content: space-between; /* Divide a navbar entre a esquerda e a direita */
+    align-items: center;
+    position: fixed;
+    top: 30px;
+    right: 210px;
+    padding: 15px 30px;
+    font-size: 25px;
+    font-weight: 700;
+    font-family: 'Josefin Slab', sans-serif;
+    z-index: 2;
+    color: rgba(255, 255, 255, 1);
+  }
+  
+  /* Contêiner da navbar (contém os links e o logo) */
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  /* Links de navegação à esquerda */
+  .navbar-nav {
+    display: flex;
+    gap: 40px; /* Adiciona espaçamento entre os itens */
+  }
+  
+  /* Ícone de barras à direita */
+  .icon-barras {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    left: 300px;
+    justify-content: space-between; /* Divide a navbar entre a esquerda e a direita */
+    align-items: center;
+    position: fixed;
+    top: 40px;
+  }
+  
+  .icon-barras-img {
+    max-width: 59px; /* Define o tamanho máximo do ícone */
+    max-height: 70px; /* Define o tamanho máximo do ícone */
+  }
+  
+  /* Estilos para os links da navbar */
+  .navbar .nav-link {
+    color: rgb(255, 255, 255, 1);
+    text-decoration: none;
+  }
+  
+  .navbar-nav .nav-link.locais {
+    cursor: default; /* Garante que o cursor será a seta padrão ao passar sobre 'Locais' */
+  }
+  
+  /* Formulário */
+  .form-select {
+    position: absolute;
+    top: 200px;
+    left: 122px;
+    width: 466px;
+    height: 600px;
+    border-radius: 35px;
+    background-color: rgba(217, 217, 217, 1);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    font-family: Jura;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 118%;
+    letter-spacing: 0%;
+    color: rgba(255, 255, 255, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Alinha os grupos de form no centro */
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza cada conjunto de label e select */
+    margin-top: 30px;
+  }
+  
+  /* Label */
+  .form-titulo-label {
+    font-family: 'jura', sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 118%;
+    color: rgba(30, 30, 30, 1);
+    margin-bottom: 5px;
+    text-align: left; /* Garante que o texto do label fique centralizado */
+    width: 100%;
+    padding-left: 0;
+    margin-left: 0;
+    margin-top: 0;
+  }
+  
+  /* Select */
+  .form-select select {
+    width: 345px; 
+    height: 76px;
+    padding-left: 10px;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 118%;
+    color: rgba(30, 30, 30, 1);
+    font-family: 'Jura', sans-serif;
+    margin: 0 auto; /* Centraliza o select dentro do formulário */
+  }
+  
+  /* Botão */
+  .retangulo20 {
+    padding: 20px 20px;
+    background-color: rgba(104, 105, 49, 1);
+    color: rgba(30, 30, 30, 1);
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    height: 76px;
+    width: 345px;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 118%;
+    font-family: 'Jura';
+    margin: 0 auto; /* Centraliza o botão */
+    align-items: center;
+    text-align: center;
+    margin: 20px auto 0;
+    margin-top: 60px;
+  }
+
+   /* Imagem ao lado do formulário */
+   .image-porto {
+    display: none; /* Imagem oculta inicialmente */
+    margin-left: 50px; /* Espaço entre formulário e imagem */
+    max-width: 500px;
+  }
+
+  .image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+  }

@@ -23,29 +23,69 @@
     
     <!-- CSS da página -->
     <div class="page-locais" id="page-locais">
-    <!-- Imagem de fundo (primeiro no HTML!) -->
-    <img src="../imagens_figma/pexels-alex-andrews-271121-1203808 2.png" alt="fundo" class="imagem-page-locais" />
+      <!-- Imagem de fundo (primeiro no HTML!) -->
+      <img src="../imagens_figma/pexels-alex-andrews-271121-1203808 2.png" alt="fundo" class="imagem-page-locais" />
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-custom">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#"></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link" href="page_acomodacao.html">ACOMODAÇÃO</a></li>
-            <li class="nav-item"><a class="nav-link disabled-link" href="Page_Locais.html">LOCAIS</a></li>
-            <li class="nav-item"><a class="nav-link" href="../index.html#blog">BLOG</a></li>
-            <li class="nav-item"><a class="" href="page_contactos.html">CONTACTOS</a></li>
-          </ul>
-        </div>
-        <a href="../index.html">
-          <div class="icon-barras" style="cursor: pointer;">
-            <img src="../imagens_figma/Icons/icon-linhas.svg" alt="icon barras">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-custom">
+          <div class="container-fluid">
+              <a class="navbar-brand"></a> 
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+
+              <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav ms-auto">
+                      <li class="nav-item"><a class="nav-link" href="page_acomodacao.html">ACOMODAÇÃO</a></li>
+                      <li class="nav-item"><a class="nav-link disabled-link" href="Page_Locais.html">LOCAIS</a></li>
+                      <li class="nav-item"><a class="nav-link" href="../index.html#blog">BLOG</a></li>
+                      <li class="nav-item"><a class="nav-link" href="page_contactos.html">CONTACTOS</a></li>
+                  </ul>
+              </div>
+
+              <a href="../index.html">
+                  <div class="icon-barras" style="cursor: pointer;">
+                      <img src="../imagens_figma/Icons/icon-linhas.svg" alt="icon barras">
+                  </div>
+              </a>
           </div>
-       </div>
-    </nav>
+      </nav>
+
+      <!-- Formulário - fora da navbar -->
+      <div class="form-select">
+          <!-- País -->
+          <div class="form-group">
+              <label class="form-titulo-label" for="pais">Escolha o país:</label>
+              <select id="pais" name="pais">
+                  
+                  <option value="pt">Portugal</option>
+                  <option value="es">Espanha</option>
+                  <option value="fr">França</option>
+              </select>
+          </div>
+
+          <!-- Cidade -->
+          <div class="form-group">
+              <label class="form-titulo-label" for="cidade">Escolha a cidade:</label>
+              <select id="cidade" name="cidade">
+                  <option value="porto">Porto</option>
+                  <option value="madrid">Madrid</option>
+                  <option value="paris">Paris</option>
+              </select>
+          </div>
+
+          <!-- Botão -->
+          <div class="retangulo20">
+              Ver
+          </div>
+      </div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+
+</script>
+</body>
+</html>
   
  
