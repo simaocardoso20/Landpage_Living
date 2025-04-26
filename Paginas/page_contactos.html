@@ -41,9 +41,9 @@
             <li class="nav-item"><a class="nav-link disabled-link" href="#">CONTACTOS</a></li>
           </ul>
         </div>
-        <a href="../index.html">
-          <div class="icon-barras" style="cursor: pointer;">
-            <img src="../imagens_figma/Icons/icon-linhas.svg" alt="icon barras">
+        <div class="icon-barras" style="cursor: pointer;" onclick="window.location.href='../index.html'">
+          <img src="../imagens_figma/Icons/icon-linhas.svg" alt="icon barras">
+        </div>
           </div>
        </div>
     </nav>
@@ -61,18 +61,24 @@
 
   <!-- Formulário -->
   <div class="form-wrapper">
-    <div class="mb-3" class="form-control-lg">
-      <label for="exampleFormControlInput1" class="form-label">Nome:</label>
-      <input type="name" class="form-control input-altura" id="inputNome">
-    </div>
-    <div class="mb-3">
-    <label for="exampleFormControlInput1" class="form-label">Email:</label>
-    <input type="email" class="form-control input-altura" id="inputEmail">
+    <form id="formulario">
+      <div class="mb-3">
+        <label for="inputNome" class="form-label">Nome:</label>
+        <input type="text" class="form-control input-altura" id="inputNome">
+      </div>
+      <div class="mb-3">
+        <label for="inputEmail" class="form-label">Email:</label>
+        <input type="email" class="form-control input-altura" id="inputEmail">
+      </div>
+      <div class="mb-3">
+        <label for="inputMensagem" class="form-label">Mensagem:</label>
+        <textarea class="form-control input-altura-mensagem" id="inputMensagem"></textarea>
+      </div>
+      <!-- Botão enviar -->
+      <button type="submit" class="rectangle10">Enviar</button>
+    </form>
   </div>
-   <div class="mb-3">
-      <label for="exampleFormControlTextarea1" class="form-label">Mensagem:</label>
-      <textarea class="form-control input-altura-mensagem" id="inputMensagem"></textarea>
-    </div>
+    
 <!-- Botão enviar -->
  <div class="rectangle10">
  Enviar 
@@ -95,20 +101,19 @@
 
     <script>
      // Seleciona os elementos do botão e do pop-up
-const btnEnviar = document.querySelector('.rectangle10');
+     const formulario = document.getElementById('formulario');
 const popup = document.getElementById('popup');
 const closePopup = document.getElementById('closePopup');
 
-// Exibe o pop-up quando o botão "Enviar" for clicado
-btnEnviar.addEventListener('click', function() {
-  popup.style.display = 'flex'; // Torna o pop-up visível
-  popup.style.opacity = '1';  // Adiciona uma transição de opacidade
-  popup.style.transition = 'opacity 30s ease';  // Animação suave
+formulario.addEventListener('submit', function(e) {
+  e.preventDefault(); // evita redirecionamento
+  popup.style.display = 'flex';
+  popup.style.opacity = '1';
+  popup.style.transition = 'opacity 0.3s ease';
 });
 
-// Fecha o pop-up quando o botão de fechar é clicado
 closePopup.addEventListener('click', function() {
-  popup.style.display = 'none'; // Oculta o pop-up novamente
+  popup.style.display = 'none';
 });
 </script>
 

@@ -25,9 +25,7 @@
   
     /* Imagem de fundo */
     .imagem-page-locais {
-      position: absolute;
-      top: 0;
-      left: 0;
+      position: fixed;
       width: 1440px;
       height: 1024px;
       object-fit: fill; /* imagem ocupa exatamente as dimensões */
@@ -38,17 +36,18 @@
   
   /* Navbar sobre a imagem */
   .navbar-custom {
+    position: fixed !important;
     display: flex;
     justify-content: space-between; /* Divide a navbar entre a esquerda e a direita */
     align-items: center;
-    position: fixed;
     top: 30px;
+    width: 100%;
     right: 210px;
     padding: 15px 30px;
     font-size: 25px;
     font-weight: 700;
     font-family: 'Josefin Slab', sans-serif;
-    z-index: 2;
+    z-index: 9999;
     color: rgba(255, 255, 255, 1);
   }
   
@@ -62,7 +61,7 @@
   /* Links de navegação à esquerda */
   .navbar-nav {
     display: flex;
-    gap: 40px; /* Adiciona espaçamento entre os itens */
+    gap: 40px; 
   }
   
   /* Ícone de barras à direita */
@@ -95,11 +94,11 @@
   
   /* Formulário */
   .form-select {
-    position: absolute;
+    position: fixed;
     top: 200px;
-    left: 122px;
+    left: 350px;
     width: 466px;
-    height: 600px;
+    height: 610px;
     border-radius: 35px;
     background-color: rgba(217, 217, 217, 1);
     padding: 30px;
@@ -114,6 +113,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 100px;
+    gap: 40px;
   }
   
   /* Alinha os grupos de form no centro */
@@ -121,7 +122,7 @@
     display: flex;
     flex-direction: column;
     align-items: center; /* Centraliza cada conjunto de label e select */
-    margin-top: 30px;
+    margin-top: 0;
   }
   
   /* Label */
@@ -152,6 +153,11 @@
     color: rgba(30, 30, 30, 1);
     font-family: 'Jura', sans-serif;
     margin: 0 auto; /* Centraliza o select dentro do formulário */
+    appearance: none;
+    background: url('../imagens_figma/Icons/Vector.png') no-repeat right center; /* Substitua 'path/to/your-arrow-image.png' pelo caminho da sua imagem */
+    background-size: 25px 20px; /* Ajuste o tamanho da seta conforme necessário */
+    background-color: #fff; /* Garante que o fundo dos campos seja branco */
+    background-position: 290px;
   }
   
   /* Botão */
@@ -172,18 +178,83 @@
     align-items: center;
     text-align: center;
     margin: 20px auto 0;
-    margin-top: 60px;
   }
 
    /* Imagem ao lado do formulário */
-   .image-porto {
-    display: none; /* Imagem oculta inicialmente */
-    margin-left: 50px; /* Espaço entre formulário e imagem */
-    max-width: 500px;
+
+  .image-madrid {
+  position: fixed;
+  top: 150px;
+  left: 100px;
+  width: 466px;
+  height: 363px;
+  border-radius: 15px;
   }
 
-  .image-container img {
-    width: 100%;
-    height: auto;
-    border-radius: 15px;
+  .image-porto {
+  position: fixed;
+  top: 150px;
+  left: 100px;
+  width: 466px;
+  height: 363px;
+}
+
+.cidade-container {
+  position: relative;
+  top: 5%; /* Reduzido de 23% para 5% */
+  left: 70%;
+  transform: translateX(-50%);
+  z-index: 10;
+  text-align: left;
+  max-width: 600px;
+}
+
+.imagem-morada {
+  position: fixed;
+  top: 560px;
+  left: 100px;
+  width: 465px;
+  height: 206px; /* Adicionado "px" que estava faltando */
+  z-index: 1;
+  border-radius: 15px;
+}
+
+.texto-imagem-morada-linha1 {
+  position: fixed;
+  left: 170px;
+  z-index: 2;
+  color: #fff;
+  font-family: 'Jura', sans-serif;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 118%;
+  text-align: left;
+  top: 580px;
+}
+
+.texto-imagem-morada-linha2 {
+  position: fixed;
+  left: 170px;
+  z-index: 2;
+  color: #fff;
+  font-family: 'Jura', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 118%;
+  text-align: left;
+  top: 625px;
+}
+
+  .texto-imagem-morada p {
+    margin: 0;
+    padding: 5px 0;
+    overflow: hidden ;
   }
+
+  html, body {
+    overflow: hidden;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page Locais</title>
 
-   <!-- Link Bootstrape -->
+   <!-- Link Bootstrap -->
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
     
    <!-- Link CSS -->
@@ -15,16 +15,10 @@
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Jura:wght@300..700&family=Sriracha&display=swap" rel="stylesheet">
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 </head>
 <body>
     
-    <!-- CSS da página -->
-    <div class="page-locais" id="page-locais">
-      <!-- Imagem de fundo (primeiro no HTML!) -->
-      <img src="../imagens_figma/pexels-alex-andrews-271121-1203808 2.png" alt="fundo" class="imagem-page-locais" />
 
       <!-- Navbar -->
       <nav class="navbar navbar-expand-lg navbar-custom">
@@ -51,68 +45,93 @@
           </div>
       </nav>
 
-      <!-- Formulário - fora da navbar -->
-      <div class="form-select">
-          <!-- País -->
-          <div class="form-group">
-              <label class="form-titulo-label" for="pais">Escolha o país:</label>
-              <select id="pais" name="pais">
-                  
-                  <option value="pt">Portugal</option>
-                  <option value="es">Espanha</option>
-                  <option value="fr">França</option>
-              </select>
-          </div>
+      <div class="page-locais" id="page-locais">
+        <!-- Imagem de fundo (primeiro no HTML!) -->
+        <img src="../imagens_figma/pexels-alex-andrews-271121-1203808 2.png" alt="fundo" class="imagem-page-locais" />
 
-          <!-- Cidade -->
-          <div class="form-group">
-              <label class="form-titulo-label" for="cidade">Escolha a cidade:</label>
-              <select id="cidade" name="cidade">
-                  <option value="porto">Porto</option>
-                  <option value="madrid">Madrid</option>
-                  <option value="paris">Paris</option>
-              </select>
-          </div>
+     <!-- Formulário - fora da navbar -->
+<div class="form-select">
+    <!-- País -->
+    <div class="form-group">
+        <label class="form-titulo-label" for="pais">Escolha o país:</label>
+        <select id="pais" name="pais">
+            <option value="" selected disabled hidden>País</option>
+            <option value="pt">Portugal</option>
+            <option value="es">Espanha</option>
+        </select>
+    </div>
 
-          <!-- Botão -->
-          <div class="retangulo20">
-              Ver
-          </div>
-      </div>
+    <!-- Cidade -->
+    <div class="form-group">
+        <label class="form-titulo-label" for="cidade">Escolha a cidade:</label>
+        <select id="cidade" name="cidade">
+            <option value="" selected disabled hidden>Cidade</option>
+            <option value="porto">Porto</option>
+            <option value="madrid">Madrid</option>
+        </select>
+    </div>
 
-  </div>
-
-   <!-- Área para exibir a imagem -->
-   <div class="image-porto" id="imageContainer">
-    <img id="Porto" src="../imagens_figma/porto.png" alt="Porto">
+    <!-- Botão -->
+<div class="retangulo20" id="btn-ver">
+    Ver
+    </div>
 </div>
 
+<!-- Área para exibir a imagem -->
+<div class="cidade-container" id="portoContainer" style="display: none;">
+    <img src="../imagens_figma/porto.png" alt="Porto" class="image-porto">
+    <img src="../imagens_figma/Icons/Rectangle 24 (1).png" alt="Imagem extra" class="imagem-morada">
+    <div class="texto-imagem-morada">
+        <div class="texto-imagem-morada-linha1">
+            <p>LIVING AROUND - Porto</p>
+        </div>
+        <div class="texto-imagem-morada-linha2">
+            <p>Rua da Alegria, 666</p>
+            <p>4000-789 - Porto</p>
+            <p>livingaround_porto@living.com</p>
+        </div>
+    </div>
+</div>
+
+<!-- Container Madrid -->
+<div class="cidade-container" id="madridContainer" style="display: none;">
+    <img src="../imagens_figma/Madrid.png" alt="Madrid" class="image-madrid">
+    <img src="../imagens_figma/Icons/Rectangle 24 (1).png" alt="Imagem extra" class="imagem-morada">
+    <div class="texto-imagem-morada">
+        <div class="texto-imagem-morada-linha1">
+            <p>LIVING AROUND - Madrid</p>
+        </div>
+        <div class="texto-imagem-morada-linha2">
+            <p>Calle de Valverde, 351</p>
+            <p>28004 - Madrid</p>
+            <p>livingaround_madrid@living.com</p>
+        </div>
+    </div>
+</div>
+
+
 <script>
-    // Função para exibir a imagem quando Portugal e Porto forem selecionados
-    document.getElementById('pais').addEventListener('change', checkSelection);
-    document.getElementById('cidade').addEventListener('change', checkSelection);
-
-    function checkSelection() {
-        var pais = document.getElementById('pais').value;
-        var cidade = document.getElementById('cidade').value;
-
-        // Verifica se o país é Portugal e a cidade é Porto
-        if (pais === 'pt' && cidade === 'porto') {
-            // Define o caminho da imagem (adicione o caminho do arquivo da sua imagem)
-            var imgPath = 'imagens/porto.jpg'; // Substitua pelo caminho correto da sua imagem
-
-            // Exibe a imagem
-            var imageContainer = document.getElementById('imageContainer');
-            var image = document.getElementById('image');
-            image.src = imgPath;
-            imageContainer.style.display = 'block'; // Torna a imagem visível
-        } else {
-            // Esconde a imagem se as seleções não corresponderem
-            var imageContainer = document.getElementById('imageContainer');
-            imageContainer.style.display = 'none';
+    document.getElementById('btn-ver').addEventListener('click', function() {
+        const paisSelecionado = document.getElementById('pais').value;
+        const cidadeSelecionada = document.getElementById('cidade').value;
+    
+        const portoContainer = document.getElementById('portoContainer');
+        const madridContainer = document.getElementById('madridContainer');
+    
+        // Esconde todos
+        portoContainer.style.display = 'none';
+        madridContainer.style.display = 'none';
+    
+        // Mostra o correspondente
+        if (paisSelecionado === 'pt' && cidadeSelecionada === 'porto') {
+            portoContainer.style.display = 'block';
+        } else if (paisSelecionado === 'es' && cidadeSelecionada === 'madrid') {
+            madridContainer.style.display = 'block';
         }
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+    });
+    </script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
         
-         
-    </body>
+</body>
 </html>
