@@ -215,7 +215,7 @@ height: 161px;
 .close-btn {
   width: 270px; /* largura fixa */
   height: 60px; /* altura maior */
-  font-size: 16px;
+  font-size: 20px;
   background-color: rgba(97, 178, 245, 1);
   border: none;
   border-radius: 30px;
@@ -224,7 +224,6 @@ height: 161px;
   transition: background-color 0.3s ease;
   font-family: 'Jura';
   font-weight: 700;
-  font-size: 15px;
   line-height: 118%;
   letter-spacing: 0%;
   margin: 20px auto 0 auto;
