@@ -30,7 +30,7 @@
   }
   
   .navbar-custom {
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     z-index: 10;
@@ -38,7 +38,6 @@
     font-family: Jura, sans-serif;
     font-size: 25px;
     font-weight: 700;
-    background-color: transparent !important;
   }
   
   .navbar-nav .nav-item {
@@ -53,10 +52,10 @@
     color: #000;
     font-weight: bold;
   }
-  
-  .navbar-toggler {
-    border: none;
-    background: transparent;
+
+  .navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
   }
   
   .texto-cabecalho {
@@ -88,6 +87,7 @@
     align-items: center;
     justify-content: center;
     padding: 40px 20px;
+    height: 569px;
   }
   
   .texto-coluna2 {
@@ -182,7 +182,7 @@
   /* SECTION ACOMODAÇÃO - COM GRID */
   .section-acomodacao {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 0.9fr 1.1fr; /* ou 40% 60%, conforme preferires */
     width: 100%;
     background-color: #000;
   }
@@ -195,8 +195,9 @@
   
   .imagem-coluna4 {
     width: 100%;
-    height: auto;
+    height: 515px;
     object-fit: cover;
+    object-position: bottom; 
   }
   
   .coluna5 {
@@ -206,8 +207,10 @@
     justify-content: center;
     padding: 40px 20px;
     position: relative;
-  }
+    height: 515px;
   
+  }
+
   .texto-coluna5 {
     font-family: Jura, sans-serif;
     font-weight: 700;
@@ -217,7 +220,7 @@
     line-height: 1.3;
     margin-bottom: 30px;
   }
-  
+
   .rectangle-2 {
     width: 309px;
     height: 77px;
@@ -397,7 +400,13 @@
   /* RESPONSIVIDADE COM GRID */
   @media (max-width: 992px) {
     .texto-coluna2 {
-      font-size: 36px;
+      font-size: 3.2vw;
+      text-align: center;
+      padding-top: 20vh;
+    }
+
+    .coluna2 {
+      height: 45vh;
     }
     
     .listas-duplas {
@@ -410,11 +419,90 @@
     }
   }
   
+/* RESPONSIVIDADE COM GRID */
+@media (max-width: 1088px) {
+  .texto-coluna2 {
+    font-size: 3.2vw;
+    text-align: center;
+    padding-top: 20vh;
+  }
+
+  .coluna2 {
+    height: 45vh;
+  }
+  
+  .listas-duplas {
+    gap: 60px;
+  }
+  
+  .rectangle-2, .rectangle-3, .rectangle-4 {
+    width: 280px;
+    font-size: 26px;
+  }
+}
+
+
   @media (max-width: 768px) {
     /* Navegação mobile */
     .navbar-nav {
-      background-color: rgba(255, 255, 255, 0.9);
+      background-color: transparent;
       padding: 10px;
+    }
+
+    .navbar-toggler:focus {
+      outline: none;
+      box-shadow: none;
+    }
+
+    @media (max-width: 768px) {
+      /* Quando o menu está aberto */
+      .navbar-collapse.show, 
+      .navbar-collapse.collapsing {
+        padding: 15px;
+        margin-top: 10px;
+        text-align: right;
+        position: relative;
+        z-index: 100;
+      }
+    
+      /* Alinha os itens à direita */
+      .navbar-nav {
+        width: 100%;
+        text-align: right;
+      }
+    
+      .navbar-nav .nav-item {
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+    
+      .navbar-nav .nav-link {
+        font-size: 20px;
+        padding: 8px 0;
+        display: inline-block;
+      }
+    
+      /* Força a barra de navegação a ficar por cima do conteúdo */
+      .navbar-custom {
+        width: 100%;
+        position: fixed;
+        background-color: transparent;
+      }
+      
+      /* Ajuste para que o restante do conteúdo seja empurrado para baixo */
+      .cabecalho-hero {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      /* Ajusta a posição do botão toggle */
+      .navbar-toggler {
+        margin-left: auto;
+      }
+    }
+
+    .navbar-collapse.show ~ .cabecalho-hero {
+      margin-top: 80px; /* Ajuste de acordo com a altura da navbar */
     }
     
     /* Grid responsivo para mobile */
@@ -426,6 +514,10 @@
     width: 60%; 
     height: 1px;
     margin: 20px auto;
+    }
+
+    .coluna2 {
+      height: 50vh;
     }
     
     .texto-coluna2 {
@@ -482,6 +574,10 @@
     .texto-cabecalho {
       font-size: 10vw;
     }
+
+    .coluna2 {
+      height: 55vh;
+    }
     
     .texto-coluna2 {
       font-size: 22px;
@@ -503,3 +599,34 @@
       font-size: 20px;
     }
   }
+
+
+  /* Centralização dos retângulos em todas as resoluções */
+.rectangle-2, .rectangle-3 {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Ajustes específicos para telas menores */
+@media (max-width: 768px) {
+  /* Garante que os containers dos botões centralizem seu conteúdo */
+  .coluna5, .section-locais-texto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  /* Ajuste específico para garantir centralização mesmo quando houver outros elementos */
+  .rectangle-2, .rectangle-3 {
+    align-self: center;
+    /* Se necessário, remova posicionamentos absolutos que possam interferir */
+  }
+  
+  /* Ajuste para que as setas não interfiram no layout central */
+  .icon-seta1, .icon-seta2 {
+    position: absolute;
+    /* Mantém posicionamento absoluto mas não interfere na centralização dos botões */
+  }
+}

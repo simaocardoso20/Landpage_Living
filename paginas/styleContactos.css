@@ -1,62 +1,82 @@
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* centrar o conteúdo horizontalmente */
-  width: 100%;
-  max-width: 1440px;
-  margin: 0 auto;
+/* Reset e estilos base */
+* {
+  margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Jura', sans-serif;
+  overflow-x: hidden;
 }
 
 a {
   text-decoration: none;
   color: inherit;
 }
-  
-  /* Página completa */
-  .page-contactos {
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
   position: relative;
-  width: 1440px;
-  height: 1024px;
-  margin: 0 auto; /* centrar horizontalmente */
-  overflow: hidden;
+}
+
+/* Layout da página principal usando Grid */
+.page-contactos {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 800px;
+  max-width: 1440px;
+  margin: 0 auto;
   background: rgba(0, 0, 0, 0.55);
-  }
+  overflow: hidden;
+}
 
-  /* Imagem de fundo */
-  .imagem-page-contactos {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 1440px;
-    height: 1024px;
-    object-fit: fill; /* imagem ocupa exatamente as dimensões */
-    z-index: -1;
-    display: block;
-    border-radius: 0 !important;
-  }
-  
-  /* Navbar sobre a imagem */
-  .navbar-custom {
-    position: relative;
-    z-index: 2;
-    background-color: transparent !important;
-    padding: 15px 30px;
-    font-size: 25px;
-    line-height: 100%;
-    letter-spacing: 0;
-    right: 55px;
-    top: 50px;
-    font-family: 'Josefin Slab', sans-serif;
-  }
+/* Imagem de fundo */
+.imagem-page-contactos {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  display: block;
+  border-radius: 0 !important;
+}
 
-  .navbar-nav .nav-item {
-    margin-right: 40px; /* aumenta o espaço entre os itens */
-  }
+/* Icon barras */
+.icon-barras {
+  position: absolute !important; /* Usa fixed ao invés de absolute para garantir posição */
+  top: 30px !important;
+  left: 60px !important;
+  z-index: 1000 !important; /* Valor alto de z-index para garantir que fique acima de outros elementos */
+  display: block !important;
+}
+
+/* Navbar */
+.navbar-custom {
+  position: absolute;
+  top: 50px;
+  right: 55px;
+  padding: 15px 30px;
+  font-size: 25px;
+  line-height: 100%;
+  letter-spacing: 0;
+  font-family: 'Josefin Slab', sans-serif;
+  z-index: 2;
+}
+
+.navbar-nav .nav-item {
+  margin-right: 40px;
+}
 
 .navbar-nav .nav-item:last-child {
-    margin-right: 0;
-  }
+  margin-right: 0;
+}
 
 .navbar .nav-link {
   color: rgb(255, 255, 255, 1);
@@ -67,75 +87,27 @@ a {
   cursor: default;
   color: rgba(255, 255, 255, 1);
 }
-  
-  /* Texto ao centro */
-  .texto-page-contactos {
-    position: absolute;
-    top: 33%;
-    right: 100px; /* distância do lado direito */
-    transform: translateY(-50%); /* apenas centra verticalmente */
-    z-index: 1;
-    color: rgb(255, 255, 255, 1);
-    text-align: center; /* alinha o texto à direita */
-    font-size: 25px;
-    line-height: 70%;
-    font-family: 'Jura';
-    font-weight: 700;
-    letter-spacing: 0%;
-    right: 300px;
-}
-
-  /* Texto autor */
-  .texto-autor{
-  position: absolute;
-  top: 40%;
-  right: 300px; /* distância do lado direito */
-  transform: translateY(-50%); /* apenas centra verticalmente */
-  z-index: 1;
-  font-family: 'Jura';
-  font-size: 20px;
-  line-height: 118%;
-  letter-spacing: 0%;
-  font-weight: 700;
-  color: rgb(255, 255, 255, 1);
-}
-
-  /* Icon barras */
-.icon-barras {
-  color: rgba(0, 0, 0, 1);
-  position: absolute;
-  top: 0px; /* distancia do fundo */
-  left: 120px; /* distancia da direita */
-  width: 59px;
-  height: 70px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  cursor: pointer;
-}
 
 /* Formulário */
 .form-wrapper {
   position: absolute;
-  top: 150px;
-  left: 300px;
+  top: 160px;
+  left: 170px;
   width: 420px;
-  height: 700px;
-  border-radius: 30px;
   background-color: rgba(0, 0, 0, 1);
   padding: 30px;
   border-radius: 20px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-  font-family: Jura;
+  font-family: 'Jura', sans-serif;
   font-weight: 700;
   font-size: 20px;
   line-height: 118%;
-  letter-spacing: 0%;
+  letter-spacing: 0;
   color: rgba(255, 255, 255, 1);
   display: flex;
   flex-direction: column;
   align-items: center;
+  z-index: 1;
 }
 
 .input-altura,
@@ -145,40 +117,71 @@ a {
 }
 
 .input-altura {
-height: 76px;
+  height: 76px;
 }
 
 .input-altura-mensagem {
-height: 161px; 
+  height: 161px;
 }
 
 /* Botão enviar */
 .rectangle10 {
   width: 338px;
   height: 76px;
-  left: 254px;
   border-radius: 40px;
-  border-width: 3px;
   border: 3px solid rgba(255, 255, 255, 1);
+  background-color: rgba(0, 0, 0, 1);
+  color: rgba(255, 255, 255, 1); 
   margin-top: 40px;
   line-height: 76px;
   cursor: pointer;
   transition: all 0.3s ease;
   display: flex;
-  align-items: center;     /* centra verticalmente */
+  align-items: center;
   justify-content: center;
-  font-family: Jura;
-  padding: 0 130px;  
+  font-family: 'Jura', sans-serif;
+  padding: 0 130px;
   font-size: 25px;
   font-weight: 700;
 }
 
+/* Texto ao centro */
+.texto-page-contactos {
+  position: absolute;
+  top: 33%;
+  right: 100px;
+  transform: translateY(-50%);
+  color: rgb(255, 255, 255, 1);
+  text-align: center;
+  font-size: 25px;
+  line-height: 70%;
+  font-family: 'Jura', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0;
+  z-index: 1;
+}
+
+/* Texto autor */
+.texto-autor {
+  position: absolute;
+  top: 40%;
+  right: 100px;
+  transform: translateY(-50%);
+  font-family: 'Jura', sans-serif;
+  font-size: 20px;
+  line-height: 118%;
+  letter-spacing: 0;
+  font-weight: 700;
+  color: rgb(255, 255, 255, 1);
+  z-index: 1;
+}
+
 /* Pop-up de Sucesso */
 .alert-form {
-  display: none; /* Inicialmente oculto */
+  display: none;
   position: fixed;
-  top: 70px; /* ou 0, se quiser colado ao topo */
-  left: 49.3%;
+  top: 70px;
+  left: 50%;
   transform: translateX(-50%);
   width: 741px;
   height: 175px;
@@ -201,20 +204,19 @@ height: 161px;
 }
 
 .popup-content p {
-  font-family: Jura;
+  font-family: 'Jura', sans-serif;
   font-weight: 700;
   font-size: 20px;
   line-height: 118%;
-  letter-spacing: 0%;
-  display: flex;              
-  flex-direction: column;     
+  letter-spacing: 0;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-
 }
 
 .close-btn {
-  width: 270px; /* largura fixa */
-  height: 60px; /* altura maior */
+  width: 270px;
+  height: 60px;
   font-size: 20px;
   background-color: rgba(97, 178, 245, 1);
   border: none;
@@ -222,15 +224,643 @@ height: 161px;
   color: white;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  font-family: 'Jura';
+  font-family: 'Jura', sans-serif;
   font-weight: 700;
   line-height: 118%;
-  letter-spacing: 0%;
+  letter-spacing: 0;
   margin: 20px auto 0 auto;
 }
 
+/* Media Queries para diferentes tamanhos de tela */
+
+/* Tablets (768px - 1023px) */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .navbar-custom {
+    right: 30px;
+    font-size: 20px;
+  }
+
+  .navbar-nav .nav-item {
+    margin-right: 20px;
+  }
+
+  @media screen and (max-width: 1068px) {
+    .navbar-toggler-icon,
+    .navbar-toggler {
+      filter: brightness(0) invert(1);
+      color: white !important;
+      border-color: white !important;
+    }
+  }
+
+  .navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+  .icon-barras {
+    left: 50px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .form-wrapper {
+    left: 50px;
+    width: 380px;
+  }
+
+  .input-altura,
+  .input-altura-mensagem,
+  .rectangle10 {
+    width: 320px;
+  }
+
+  .texto-page-contactos {
+    right: 100px;
+    font-size: 22px;
+  }
+
+  .texto-autor {
+    right: 100px;
+    font-size: 18px;
+  }
+
+  .alert-form {
+    width: 90%;
+    max-width: 600px;
+  }
+}
 
 
+@media screen and (min-width: 1024px) and (max-width: 1100px) {
+  /* Ajuste no formulário para dar mais espaço ao texto */
+  .form-wrapper {
+    left: 120px; /* Reduzir um pouco para a esquerda */
+  }
+  
+  /* Ajuste na posição do texto para evitar sobreposição */
+  .texto-page-contactos {
+    right: 50px; /* Mover mais para a direita */
+    font-size: 23px; /* Ligeiramente menor */
+    width: 400px; /* Controlar largura máxima */
+  }
+  
+  .texto-autor {
+    right: 50px; /* Alinhar com a citação */
+    font-size: 18px; /* Ligeiramente menor */
+  }
+}
+
+/* Correção específica para a faixa problemática de 1040-1067px */
+@media screen and (min-width: 1040px) and (max-width: 1067px) {
+  .texto-page-contactos {
+    right: 30px; /* Ainda mais à direita */
+    width: 380px;
+  }
+  
+  .texto-autor {
+    right: 30px;
+  }
+  
+  .form-wrapper {
+    width: 400px; /* Ligeiramente mais estreito */
+    left: 100px;
+  }
+  
+  /* Ajustes nos elementos internos do formulário */
+  .input-altura, 
+  .input-altura-mensagem,
+  .rectangle10 {
+    width: 320px;
+  }
+}
+
+/* Alternativa: reorganização para telas médias */
+@media screen and (min-width: 1024px) and (max-width: 1100px) {
+  /* Podemos também fazer o texto ficar acima do form em vez de lado a lado */
+  .texto-page-contactos {
+    top: 15%;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    text-align: center;
+    transform: none;
+    width: 80%;
+  }
+  
+  .texto-autor {
+    top: 22%;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    text-align: center;
+    transform: none;
+  }
+  
+  .form-wrapper {
+    top: 30%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+}
 
 
+/* Mobile (até 767px) */
+@media screen and (max-width: 767px) {
+  .page-contactos {
+    height: auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 50px;
+  }
+
+  .icon-barras {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .navbar-custom {
+    position: relative;
+    top: 60px;
+    right: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    margin-bottom: 30px;
+  }
+
+  .navbar-toggler {
+    position: relative;
+    top: -30px;
+    z-index: 1000; 
+  }
+
+  .navbar-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .navbar-nav .nav-item {
+    margin-right: 15px;
+    margin-bottom: 5px;
+    font-size: 18px;
+  }
+
+  .navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+  @media screen and (max-width: 767px) {
+    .navbar-toggler-icon,
+    .navbar-toggler {
+      filter: brightness(0) invert(1); /* Faz o ícone ficar branco */
+      color: white !important;
+      border-color: white !important;
+    }
+  }
+
+  .form-wrapper {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 90%;
+    max-width: 380px;
+    padding: 20px;
+    margin: 20px 0;
+  }
+
+  .input-altura,
+  .input-altura-mensagem,
+  .rectangle10 {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .input-altura {
+    height: 60px;
+  }
+
+  .input-altura-mensagem {
+    height: 120px;
+  }
+
+  .rectangle10 {
+    height: 60px;
+    font-size: 20px;
+    padding: 0;
+  }
+
+  .texto-page-contactos,
+  .texto-autor {
+    position: relative;
+    top: auto;
+    right: auto;
+    transform: none;
+    margin: 10px auto;
+    text-align: center;
+    width: 90%;
+  }
+
+  .texto-page-contactos {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+  .texto-autor {
+    font-size: 18px;
+  }
+
+  .alert-form {
+    width: 90%;
+    max-width: 400px;
+    height: auto;
+  }
+
+  .close-btn {
+    width: 100%;
+    max-width: 220px;
+    height: 50px;
+    font-size: 18px;
+  }
+}
+
+/* Mobile pequeno (até 480px) */
+@media screen and (max-width: 480px) {
+  .navbar-custom {
+    font-size: 16px;
+  }
+
+  .navbar-nav .nav-item {
+    margin-right: 10px;
+    font-size: 16px;
+  }
+
+  .navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+  .form-wrapper {
+    padding: 15px;
+    font-size: 16px;
+  }
+
+  .texto-page-contactos {
+    font-size: 18px;
+  }
+
+  .texto-autor {
+    font-size: 16px;
+  }
+
+  .rectangle10 {
+    font-size: 18px;
+  }
+}
+
+/* Correção para todas as telas médias onde ocorre sobreposição */
+@media screen and (min-width: 769px) and (max-width: 1100px) {
+  /* Reorganização do layout: texto acima do formulário */
+  .texto-page-contactos {
+    position: relative;
+    top: 80px;
+    right: auto;
+    left: auto;
+    transform: none;
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 1.3;
+    z-index: 5;
+  }
+  
+  .texto-autor {
+    position: relative;
+    top: 90px;
+    right: auto;
+    left: auto;
+    transform: none;
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+    text-align: center;
+    z-index: 5;
+  }
+  
+  .form-wrapper {
+    position: relative;
+    top: 120px;
+    left: auto;
+    margin: 0 auto;
+    width: 90%;
+    max-width: 420px;
+    z-index: 4;
+  }
+  
+  /* Ajuste na altura da página para acomodar os elementos reorganizados */
+  .page-contactos {
+    height: auto;
+    min-height: 100vh;
+    padding-bottom: 100px;
+  }
+  
+  /* Ajustes nos elementos do formulário */
+  .input-altura, 
+  .input-altura-mensagem,
+  .rectangle10 {
+    width: 100%;
+    max-width: 338px;
+  }
+  
+  /* Aumentar navbar para evitar conflito com o texto movido */
+  .navbar-custom {
+    top: 20px;
+  }
+}
+
+/* Ajuste específico para telas um pouco maiores */
+@media screen and (min-width: 936px) and (max-width: 1100px) {
+  /* Podemos manter layout lateral com ajustes de posição */
+  .form-wrapper {
+    left: 80px;
+    top: 160px;
+    position: absolute;
+  }
+  
+  .texto-page-contactos {
+    right: 30px;
+    top: 33%;
+    position: absolute;
+    width: 45%;
+    max-width: 400px;
+    transform: translateY(-50%);
+  }
+  
+  .texto-autor {
+    right: 30px;
+    top: 40%;
+    position: absolute;
+    width: 45%;
+    max-width: 400px;
+    transform: translateY(-50%);
+  }
+  
+  /* Para garantir que o formulário não seja muito grande nessas telas */
+  .form-wrapper {
+    width: 380px;
+  }
+}
+
+/* Refinamento para a faixa mais problemática */
+@media screen and (min-width: 769px) and (max-width: 935px) {
+  .page-contactos {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+  .navbar-custom {
+    width: 100%;
+    right: 0;
+    text-align: right;
+    padding-right: 30px;
+  }
+  
+  .icon-barras {
+    top: 20px !important;
+    left: 20px !important;
+  }
+}
+
+/* Para garantir que nossos ajustes não quebrem o layout em celulares */
+@media screen and (max-width: 768px) {
+  .texto-page-contactos,
+  .texto-autor,
+  .form-wrapper {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    transform: none;
+    margin: 10px auto;
+    width: 90%;
+  }
+  
+  .texto-page-contactos {
+    margin-top: 80px;
+  }
+  
+  .page-contactos {
+    height: auto;
+    min-height: 100vh;
+    padding-bottom: 50px;
+  }
+}
+
+/* Correção específica para faixa crítica de 1024px a 1067px */
+@media screen and (min-width: 991px) and (max-width: 1068px) {
+  /* Reorganização vertical do layout */
+  .page-contactos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    min-height: 100vh;
+    padding-bottom: 50px;
+  }
+  
+  /* Reposiciona a navbar */
+  .navbar-custom {
+    position: absolute;
+    top: 50px;
+    right: 55px;
+    width: auto;
+  }
+  
+  /* Reposiciona o icon-barras */
+  .icon-barras {
+    position: absolute !important;
+    top: 30px !important;
+    left: 60px !important;
+  }
+  
+  /* Reposiciona o texto da citação */
+  .texto-page-contactos {
+    position: relative;
+    top: 150px;
+    right: auto;
+    left: auto;
+    transform: none;
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 1.5;
+    z-index: 5;
+  }
+  
+  /* Reposiciona o texto do autor */
+  .texto-autor {
+    position: relative;
+    top: 160px;
+    right: auto;
+    left: auto;
+    transform: none;
+    width: 90%;
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: center;
+    z-index: 5;
+  }
+  
+  /* Reposiciona o formulário para ficar abaixo dos textos */
+  .form-wrapper {
+    position: relative;
+    top: 180px;
+    left: auto;
+    right: auto;
+    margin: 20px auto;
+    width: 420px;
+    z-index: 4;
+  }
+}
+
+/* Para garantir que a transição do layout seja suave, adicione este breakpoint adjacente */
+@media screen and (min-width: 1068px) and (max-width: 1100px) {
+  /* Ajusta o layout lateral para evitar sobreposições */
+  .form-wrapper {
+    left: 100px;
+    width: 400px;
+  }
+  
+  .texto-page-contactos {
+    right: 80px;
+    width: 400px;
+  }
+  
+  .texto-autor {
+    right: 80px;
+    top: 43%;
+  }
+}
+
+/* Correção específica para faixa de 936px a 1023px */
+@media screen and (min-width: 936px) and (max-width: 1159px) {
+  /* Reorganização vertical do layout */
+  .page-contactos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    min-height: 100vh;
+    padding-bottom: 50px;
+  }
+  
+  /* Texto da citação */
+  .texto-page-contactos {
+    position: relative;
+    top: 150px;
+    right: auto;
+    left: auto;
+    transform: none;
+    width: 80%;
+    max-width: 550px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 1.5;
+    z-index: 5;
+    font-size: 22px;
+  }
+  
+  /* Texto do autor */
+  .texto-autor {
+    position: relative;
+    top: 160px;
+    right: auto;
+    left: auto;
+    transform: none;
+    width: 80%;
+    max-width: 550px;
+    margin: 15px auto 25px auto;
+    text-align: center;
+    z-index: 5;
+    font-size: 18px;
+  }
+  
+  /* Formulário abaixo dos textos */
+  .form-wrapper {
+    position: relative;
+    top: 170px;
+    left: auto;
+    right: auto;
+    margin: 0 auto;
+    width: 380px;
+    z-index: 4;
+  }
+  
+  /* Ajuste nos elementos do formulário para garantir que caibam */
+  .input-altura, 
+  .input-altura-mensagem,
+  .rectangle10 {
+    width: 320px;
+  }
+  
+  /* Navbar permanece no topo */
+  .navbar-custom {
+    position: absolute;
+    top: 50px;
+    right: 30px;
+    width: auto;
+    font-size: 20px;
+  }
+  
+  /* Icon barras mantém sua posição */
+  .icon-barras {
+    position: absolute !important;
+    top: 20px !important;
+    left: 30px !important;
+  }
+}
+
+@media screen and (max-width: 1067px) {
+  /* Alinha os itens da navbar em uma coluna quando a tela for pequena */
+  .navbar-collapse {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start; 
+    width: 100%; 
+  }
+
+  .navbar-nav {
+    background-color: transparent;
+    padding: 10px 20px;
+    width: 100%;
+  }
+
+  .navbar-nav .nav-item {
+    margin: 10px 0; 
+    width: 100%; 
+    text-align: right;
+  }
+
+  .navbar-nav .nav-link {
+    color: #ffffff; 
+    font-weight: 700; 
+    font-size: 18px;
+  }
+
+  .navbar-toggler {
+    z-index: 1050;
+  }
+}
 
