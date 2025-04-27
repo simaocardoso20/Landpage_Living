@@ -70,6 +70,13 @@ a {
   z-index: 2;
 }
 
+/* Contêiner da navbar */
+.navbar-container {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
 .navbar-nav .nav-item {
   margin-right: 40px;
 }

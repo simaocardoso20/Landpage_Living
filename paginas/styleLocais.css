@@ -1,259 +1,639 @@
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    max-width: 1440px;
-    margin: 0 auto;
-    padding: 0;
-  }
-  
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
-    
-    /* Página completa */
-    .page-locais {
-    position: relative;
-    width: 1440px;
-    height: 1024px;
-    margin: 0 auto;
-    overflow: hidden;
-    background: rgba(0, 0, 0, 0.55);
-    }
-  
-    /* Imagem de fundo */
-    .imagem-page-locais {
-      position: fixed;
-      width: 1440px;
-      height: 1024px;
-      object-fit: fill;
-      z-index: -1;
-      display: block;
-      border-radius: 0 !important;
-    }
-  
-  /* Navbar sobre a imagem */
-  .navbar-custom {
-    position: fixed !important;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    top: 30px;
-    width: 100%;
-    right: 210px;
-    padding: 15px 30px;
-    font-size: 25px;
-    font-weight: 700;
-    font-family: 'Josefin Slab', sans-serif;
-    z-index: 9999;
-    color: rgba(255, 255, 255, 1);
-  }
-  
-  /* Contêiner da navbar */
-  .navbar-container {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-  }
-  
-  /* Links de navegação à esquerda */
-  .navbar-nav {
-    display: flex;
-    gap: 40px; 
-  }
-  
-  /* Ícone de barras à direita */
-  .icon-barras {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    left: 300px;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    top: 40px;
-  }
-  
-  .icon-barras-img {
-    max-width: 59px;
-    max-height: 70px; 
-  }
-  
-  /* Estilos para os links da navbar */
-  .navbar .nav-link {
-    color: rgb(255, 255, 255, 1);
-    text-decoration: none;
-  }
-  
-  .navbar-nav .nav-link.locais {
-    cursor: default;
-  }
-  
-  /* Formulário */
-  .form-select {
-    position: fixed;
-    top: 200px;
-    left: 350px;
-    width: 466px;
-    height: 610px;
-    border-radius: 35px;
-    background-color: rgba(217, 217, 217, 1);
-    padding: 30px;
-    border-radius: 20px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    font-family: Jura;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 118%;
-    letter-spacing: 0%;
-    color: rgba(255, 255, 255, 1);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 100px;
-    gap: 40px;
-  }
-  
-  /* Alinha os grupos de form no centro */
-  .form-group {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 0;
-  }
-  
-  /* Label */
-  .form-titulo-label {
-    font-family: 'jura', sans-serif;
-    font-size: 25px;
-    font-weight: 700;
-    line-height: 118%;
-    color: rgba(30, 30, 30, 1);
-    margin-bottom: 5px;
-    text-align: left;
-    width: 100%;
-    padding-left: 0;
-    margin-left: 0;
-    margin-top: 0;
-  }
-  
-  /* Select */
-  .form-select select {
-    width: 345px; 
-    height: 76px;
-    padding-left: 10px;
-    border-radius: 15px;
-    border: 1px solid #ccc;
-    font-size: 25px;
-    font-weight: 700;
-    line-height: 118%;
-    color: rgba(30, 30, 30, 1);
-    font-family: 'Jura', sans-serif;
-    margin: 0 auto; 
-    appearance: none;
-    background: url('../imagens_figma/Icons/Vector.png') no-repeat right center;
-    background-size: 25px 20px;
-    background-color: #fff; 
-    background-position: 290px;
-  }
-  
-  /* Botão */
-  .retangulo20 {
-    padding: 20px 20px;
-    background-color: rgba(104, 105, 49, 1);
-    color: rgba(30, 30, 30, 1);
-    border: none;
-    border-radius: 15px;
-    cursor: pointer;
-    height: 76px;
-    width: 345px;
-    font-size: 25px;
-    font-weight: 700;
-    line-height: 118%;
-    font-family: 'Jura';
-    margin: 0 auto;
-    align-items: center;
-    text-align: center;
-    margin: 20px auto 0;
-  }
-
-   /* Imagem ao lado do formulário */
-  .image-madrid {
-  position: fixed;
-  top: 150px;
-  left: 100px;
-  width: 466px;
-  height: 363px;
-  border-radius: 15px;
-  }
-
-  .image-porto {
-  position: fixed;
-  top: 150px;
-  left: 100px;
-  width: 466px;
-  height: 363px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0;
 }
 
-.cidade-container {
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Página completa */
+.page-locais {
   position: relative;
-  top: 5%;
-  left: 70%;
-  transform: translateX(-50%);
-  z-index: 10;
-  text-align: left;
-  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: rgba(0, 0, 0, 0.55);
+  min-height: 100vh;
 }
 
-.imagem-morada {
+/* Imagem de fundo */
+.imagem-page-locais {
   position: fixed;
-  top: 560px;
-  left: 100px;
-  width: 465px;
-  height: 206px;
-  z-index: 1;
-  border-radius: 15px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
 }
 
-.texto-imagem-morada-linha1 {
-  position: fixed;
-  left: 170px;
-  z-index: 2;
-  color: #fff;
-  font-family: 'Jura', sans-serif;
-  font-weight: 700;
+/* Navbar sobre a imagem */
+.navbar-custom {
+  position: absolute !important;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  top: 30px;
+  width: auto;
+  right: 100px;
+  padding: 15px 30px;
   font-size: 25px;
-  line-height: 118%;
-  text-align: left;
-  top: 580px;
+  font-weight: 700;
+  font-family: 'Josefin Slab', sans-serif;
+  z-index: 9999;
+  color: rgba(255, 255, 255, 1);
 }
 
-.texto-imagem-morada-linha2 {
+
+
+/* Contêiner da navbar */
+.navbar-container {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+/* Links de navegação à esquerda */
+.navbar-nav {
+  display: flex;
+  gap: 40px;
+}
+
+/* Ícone de barras à direita */
+.icon-barras {
+  display: fixed;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  left: 120px !important;
+  justify-content: space-between;
+  align-items: center;
   position: fixed;
-  left: 170px;
-  z-index: 2;
-  color: #fff;
-  font-family: 'Jura', sans-serif;
+  top: 40px;
+}
+
+.icon-barras-img {
+  max-width: 59px;
+  max-height: 70px;
+}
+
+/* Estilos para os links da navbar */
+.navbar .nav-link {
+  color: rgb(255, 255, 255, 1);
+  text-decoration: none;
+}
+
+.navbar-nav .nav-link.locais {
+  cursor: default;
+}
+
+/* Contêiner principal para imagens e formulário */
+.container-lado-a-lado {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 5%;
+  width: 90%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 20px;
+  flex-wrap: wrap;
+  margin-top: 150px;
+}
+
+.form-select {
+  width: 466px;
+  max-width: 100%;
+  height: auto;
+  min-height: 610px;
+  border-radius: 35px;
+  background-color: rgba(217, 217, 217, 1);
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  font-family: Jura, sans-serif;
   font-weight: 700;
   font-size: 20px;
   line-height: 118%;
-  text-align: left;
-  top: 625px;
+  letter-spacing: 0%;
+  color: rgba(255, 255, 255, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 100px;
+  gap: 40px;
+  z-index: 10;
+  margin-left: 100px;
 }
 
-  .texto-imagem-morada p {
-    margin: 0;
-    padding: 5px 0;
-    overflow: hidden ;
+/* Label */
+.form-titulo-label {
+  font-family: 'jura', sans-serif;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 118%;
+  color: rgba(30, 30, 30, 1);
+  margin-bottom: 5px;
+  text-align: left;
+  width: 100%;
+  padding-left: 0;
+  margin-left: 0;
+  margin-top: 0;
+}
+
+/* Select */
+.form-select select {
+  width: 100%;
+  max-width: 400px;
+  height: 76px;
+  padding-left: 15px;
+  border-radius: 15px;
+  border: 1px solid #ccc;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 118%;
+  color: rgba(30, 30, 30, 1);
+  font-family: 'Jura', sans-serif;
+  margin: 0 auto;
+  appearance: none;
+  background: url('../imagens_figma/Icons/Vector.png') no-repeat right center;
+  background-size: 25px 20px;
+  background-color: #fff;
+  background-position: calc(100% - 20px) center;
+  display: block;
+}
+
+/* Aumente o tamanho dos campos select específicos */
+#pais,
+#cidade {
+  width: 400px !important;
+  height: 90px !important;
+  padding-left: 15px !important;
+  font-size: 25px !important;
+  box-sizing: border-box !important;
+}
+
+/* Ajuste para o container form-group */
+.form-group {
+  width: 100% !important;
+  max-width: 400px !important;
+  margin: 0 auto !important;
+}
+
+/* Manter o botão com o mesmo tamanho dos selects */
+.retangulo20 {
+  height: 90px !important; 
+  width: 400px !important;
+  max-width: 400px !important;
+  box-sizing: border-box !important;
+}
+
+.form-select select,
+form select,
+select {
+  width: 100% !important;
+  max-width: 400px !important; 
+  height: 90px !important; 
+  padding-left: 15px !important;
+  font-size: 25px !important;
+  box-sizing: border-box !important;
+}
+
+/* Ajuste também o botão com maior especificidade e !important */
+.retangulo20,
+form .retangulo20,
+button.retangulo20 {
+  height: 90px !important; 
+  width: 100% !important;
+  max-width: 400px !important; 
+  box-sizing: border-box !important;
+}
+
+/* Ajuste para o container do formulário */
+.form-select {
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+  box-sizing: border-box !important;
+}
+
+/* Botão */
+.retangulo20 {
+  padding: 20px 20px;
+  background-color: rgba(104, 105, 49, 1);
+  color: rgba(30, 30, 30, 1);
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  height: 76px;
+  width: 100%;
+  max-width: 345px;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 118%;
+  font-family: 'Jura', sans-serif;
+  margin: 20px auto 0;
+  text-align: center;
+}
+
+.cidades-imagens {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  gap: 40px;
+}
+
+.cidade-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.texto-imagem-morada {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  color: #fff;
+  padding: 0 20px;
+  z-index: 2;
+}
+
+.texto-imagem-morada p {
+  margin: 0;
+  padding: 5px 0;
+}
+
+/* Estilos para imagens */
+.image-madrid,
+.image-porto,
+.imagem-morada {
+  border-radius: 15px;
+  object-fit: cover;
+  width: 100%;
+  max-width: 466px;
+  margin-bottom: 50px;
+}
+
+.image-madrid,
+.image-porto {
+  height: 363px;
+}
+
+.imagem-morada {
+  height: 206px;
+  position: relative;
+}
+
+/* Estilos para texto sobre as imagens */
+.texto-imagem-morada-linha1,
+.texto-imagem-morada-linha2 {
+  color: #fff;
+  font-family: 'Jura', sans-serif;
+  font-weight: 700;
+  line-height: 118%;
+  text-align: left;
+  position: relative;
+}
+
+.texto-imagem-morada-linha1 {
+  font-size: 25px;
+  padding-left: 70px;
+  margin-bottom: 20px;
+}
+
+.texto-imagem-morada-linha2 {
+  font-size: 20px;
+  padding-left: 70px;
+  margin-bottom: 60px;
+}
+
+/* Media queries para telas grandes e médias */
+@media screen and (max-width: 1200px) {
+  .container-lado-a-lado {
+    gap: 40px;
+  }
+  
+  .navbar-custom {
+    right: 50px;
+    padding: 10px 20px;
+  }
+  
+  .icon-barras {
+    left: 50px !important;
+  }
+}
+
+/* Media queries para tablets */
+@media screen and (max-width: 992px) {
+  .container-lado-a-lado {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .form-select, 
+  .cidades-imagens {
+    width: 90%;
+    max-width: 500px;
+    margin: 0 auto 40px;
+  }
+  
+  .cidades-imagens {
+    margin-top: 40px;
+  }
+  
+  .navbar-custom {
+    right: 16px;
+    font-size: 20px;
+    padding: 10px 20px;
+  }
+  
+  .navbar-nav {
+    gap: 20px;
+  }
+  
+  .icon-barras {
+    left: 20px !important;
+  }
+  
+  .icon-barras-img {
+    max-width: 45px;
+    max-height: 55px;
+  }
+}
+
+/* Media queries para dispositivos móveis */
+@media screen and (max-width: 768px) {
+  .navbar-custom {
+    width: 100%;
+    right: 0;
+    justify-content: center;
+    top: 90px;
+    padding: 10px 20px;
+    margin-top: 30px;
+  }
+  
+  .icon-barras {
+    left: 50% !important;
+    transform: translateX(-50%);
+    top: 20px;
+  }
+  
+  .container-lado-a-lado {
+    margin-top: 200px;
+  }
+  
+  .form-titulo-label,
+  .form-select select,
+  .retangulo20 {
+    font-size: 20px;
+  }
+  
+  .texto-imagem-morada-linha1 {
+    font-size: 20px;
+  }
+  
+  .texto-imagem-morada-linha2 {
+    font-size: 16px;
+    padding-left: 40px;
+  }
+}
+
+/* Media queries para dispositivos muito pequenos */
+@media screen and (max-width: 480px) {
+  .navbar-nav {
+    gap: 15px;
+  }
+  
+  .navbar-custom {
+    font-size: 16px;
+    padding: 8px 15px;
+  }
+  
+  .form-select {
+    padding: 20px 15px;
+    padding-top: 60px;
+    min-height: 500px;
+  }
+  
+  .form-titulo-label {
+    font-size: 18px;
+  }
+  
+  .form-select select {
+    height: 60px;
+    font-size: 16px;
+  }
+  
+  .retangulo20 {
+    height: 60px;
+    font-size: 16px;
+  }
+  
+  .image-madrid,
+  .image-porto {
+    height: 250px;
+  }
+  
+  .imagem-morada {
+    height: 150px;
+  }
+}
+
+/* Tablets (768px - 1023px) */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .navbar-custom {
+    font-size: 16px;
+    text-align: end;
   }
 
-  html, body {
-    overflow-y: auto;
-    height: 100%;
-    margin: 0;
-    padding: 0;
+  .navbar-nav .nav-item {
+    margin-right: 20px;
+  }
+
+  @media screen and (max-width: 1068px) {
+    .navbar-toggler-icon,
+    .navbar-toggler {
+      filter: brightness(0) invert(1);
+      color: white !important;
+      border-color: white !important;
+    }
+  }
+
+    /* Estilo para o menu hambúrguer expandido */
+    .navbar-collapse.show, 
+    .navbar-collapse.collapsing {
+      background-color: rgba(0, 0, 0, 0.7); 
+      border-radius: 10px;
+      padding: 10px;
+      margin-top: 10px;
+    }
+  }
+
+  .navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+/* Mobile pequeno (até 480px) */
+@media screen and (max-width: 480px) {
+  .navbar-custom {
+    font-size: 20px;
+    text-align: end;
+  }
+
+  .navbar-toggler-icon,
+  .navbar-toggler {
+    filter: brightness(0) invert(1);
+    color: white !important;
+    border-color: white !important;
+  }
 }
+
+  .navbar-nav .nav-item {
+    margin-right: 10px;
+    font-size: 16px;
+  }
+
+  .navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+/* Mobile (até 767px) */
+@media screen and (max-width: 767px) {
+  .icon-barras {
+    position: absolute;
+    top: 10px;
+    left: 70px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .navbar-custom {
+    position: relative;
+    top: 60px;
+    right: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    margin-bottom: 30px;
+    text-align: end;
+  }
+
+  .navbar-toggler {
+    position: relative;
+    top: -30px;
+    z-index: 1000; 
+  }
+
+  .navbar-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .navbar-nav .nav-item {
+    margin-right: 15px;
+    margin-bottom: 5px;
+    font-size: 18px;
+  }
+
+  .navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .navbar-custom {
+    position: absolute;
+    top: 30px; 
+    right: 20px; 
+    width: auto; 
+    justify-content: flex-end; 
+    padding: 10px 20px; 
+    font-size: 18px; 
+  }
+  
+  .icon-barras {
+    position: fixed; 
+    top: 20px; 
+    left: 70px !important; 
+  }
+  
+  .navbar-nav {
+    gap: 15px;
+  }
+}
+
+/* Ajustes para form-select responsivo */
+@media screen and (max-width: 767px) {
+  .form-select select,
+  form select,
+  select,
+  #pais,
+  #cidade,
+  .retangulo20 {
+    width: 100% !important;
+    max-width: 100% !important; 
+    height: 70px !important; 
+    font-size: 18px !important; 
+  }
+  
+  .form-select {
+    width: 90%;
+    max-width: 400px;
+    min-height: auto; 
+    padding: 20px;
+    padding-top: 60px;
+  }
+  
+  .form-group {
+    width: 100% !important;
+  }
+}
+
+.navbar-toggler-icon,
+.navbar-toggler {
+  filter: brightness(0) invert(1);
+  color: white !important;
+  border-color: white !important;
+}
+
+/* Para telas ainda menores */
+@media screen and (max-width: 480px) {
+  .form-select select,
+  form select,
+  select,
+  #pais,
+  #cidade,
+  .retangulo20 {
+    height: 60px !important;
+    font-size: 16px !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* Estilo para o menu hambúrguer expandido */
+  .navbar-collapse.show, 
+  .navbar-collapse.collapsing {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 10px;
+  }
+}
+  
+
 
