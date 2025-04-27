@@ -1,4 +1,4 @@
-# Projeto de Programação Web - Portfólio
+# Projeto Programação Web - Website Living Around
 
 Este repositório apresenta um projeto desenvolvido no âmbito da minha formação em Programação Web. O desafio consistiu em construir um website de raiz, tendo como base um conjunto de imagens de referência e diretrizes fornecidas pela minha formadora. Ao longo do processo, foquei-me em criar uma solução que respeitasse boas práticas de desenvolvimento, acessibilidade e design responsivo.
 
