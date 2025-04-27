@@ -45,14 +45,16 @@ a {
   width: auto;
   right: 100px;
   padding: 15px 30px;
-  font-size: 25px;
+  font-size: 25px !important;
   font-weight: 700;
   font-family: 'Josefin Slab', sans-serif;
   z-index: 9999;
   color: rgba(255, 255, 255, 1);
 }
 
-
+.navbar .nav-link:active {
+  outline: none; /
+}
 
 /* Contêiner da navbar */
 .navbar-container {
@@ -67,9 +69,13 @@ a {
   gap: 40px;
 }
 
+.navbar-nav .nav-item {
+  font-size: 25px !important;
+}
+
 /* Ícone de barras à direita */
 .icon-barras {
-  display: fixed;
+  display: fixed; 
   justify-content: center;
   align-items: center;
   cursor: pointer;
@@ -89,6 +95,9 @@ a {
 .navbar .nav-link {
   color: rgb(255, 255, 255, 1);
   text-decoration: none;
+  outline: none;
+  box-shadow: none;
+  background-color: transparent;
 }
 
 .navbar-nav .nav-link.locais {
@@ -193,6 +202,7 @@ a {
   width: 400px !important;
   max-width: 400px !important;
   box-sizing: border-box !important;
+  align-content: center;
 }
 
 .form-select select,
@@ -265,8 +275,9 @@ button.retangulo20 {
   left: 0;
   right: 0;
   color: #fff;
-  padding: 0 20px;
+  padding: 0 15px;
   z-index: 2;
+  width: 100%;
 }
 
 .texto-imagem-morada p {
@@ -303,7 +314,6 @@ button.retangulo20 {
   font-weight: 700;
   line-height: 118%;
   text-align: left;
-  position: relative;
 }
 
 .texto-imagem-morada-linha1 {
@@ -354,7 +364,7 @@ button.retangulo20 {
   
   .navbar-custom {
     right: 16px;
-    font-size: 20px;
+    font-size: 25px;
     padding: 10px 20px;
   }
   
@@ -416,7 +426,7 @@ button.retangulo20 {
   }
   
   .navbar-custom {
-    font-size: 16px;
+    font-size: 25px;
     padding: 8px 15px;
   }
   
@@ -453,7 +463,7 @@ button.retangulo20 {
 /* Tablets (768px - 1023px) */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .navbar-custom {
-    font-size: 16px;
+    font-size: 25px;
     text-align: end;
   }
 
@@ -473,7 +483,7 @@ button.retangulo20 {
     /* Estilo para o menu hambúrguer expandido */
     .navbar-collapse.show, 
     .navbar-collapse.collapsing {
-      background-color: rgba(0, 0, 0, 0.7); 
+      background-color: rgba(0, 0, 0, 0.5);
       border-radius: 10px;
       padding: 10px;
       margin-top: 10px;
@@ -488,7 +498,7 @@ button.retangulo20 {
 /* Mobile pequeno (até 480px) */
 @media screen and (max-width: 480px) {
   .navbar-custom {
-    font-size: 20px;
+    font-size: 25px;
     text-align: end;
   }
 
@@ -546,7 +556,7 @@ button.retangulo20 {
   .navbar-nav .nav-item {
     margin-right: 15px;
     margin-bottom: 5px;
-    font-size: 18px;
+    font-size: 25px;
   }
 
   .navbar-toggler:focus {
@@ -628,11 +638,129 @@ button.retangulo20 {
   /* Estilo para o menu hambúrguer expandido */
   .navbar-collapse.show, 
   .navbar-collapse.collapsing {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.5);
     border-radius: 10px;
     padding: 10px;
     margin-top: 10px;
   }
+}
+
+/* Tablets (768px - 1023px) */
+@media screen and (max-width: 1023px) {
+  .texto-imagem-morada-linha1 {
+    font-size: 22px;
+    padding-left: 50px;
+    margin-bottom: 15px;
+  }
+  
+  .texto-imagem-morada-linha2 {
+    font-size: 18px;
+    padding-left: 50px;
+    margin-bottom: 70px;
+  }
+}
+
+/* Dispositivos móveis (até 767px) */
+@media screen and (max-width: 767px) {
+  .texto-imagem-morada-linha1 {
+    font-size: 20px;
+    padding-left: 30px;
+    margin-bottom: 10px;
+  }
+  
+  .texto-imagem-morada-linha2 {
+    font-size: 16px;
+    padding-left: 30px;
+    margin-bottom: 90px;
+  }
+}
+
+/* Dispositivos muito pequenos (até 480px) */
+@media screen and (max-width: 480px) {
+  .texto-imagem-morada-linha1 {
+    font-size: 18px;
+    padding-left: 20px;
+    margin-bottom: 5px;
+  }
+  
+  .texto-imagem-morada-linha2 {
+    font-size: 14px;
+    padding-left: 20px;
+    margin-bottom: 70px;
+  }
+}
+
+/* Media queries para ajustar texto conforme tamanho da tela */
+@media screen and (max-width: 1023px) {
+  .texto-imagem-morada-linha1 {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+  
+  .texto-imagem-morada-linha2 {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .texto-imagem-morada {
+    bottom: 15px;
+  }
+  
+  .texto-imagem-morada-linha1 {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+  .texto-imagem-morada-linha2 {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .texto-imagem-morada {
+    bottom: 10px;
+  }
+  
+  .texto-imagem-morada-linha1 {
+    font-size: 16px;
+    margin-bottom: 2px;
+  }
+  
+  .texto-imagem-morada-linha2 {
+    font-size: 12px;
+  }
+}
+
+/* Ajustes para diferentes tamanhos de tela */
+@media screen and (max-width: 767px) {
+  .icon-barras {
+    top: 15px !important; /* Um pouco mais para cima em telas menores */
+    left: 35px !important;
+  }
+  
+  .icon-barras-img {
+    max-width: 40px; /* Reduz um pouco o tamanho */
+    max-height: 50px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .icon-barras {
+    top: 10px !important;
+    left: 20px !important;
+  }
+  
+  .icon-barras-img {
+    max-width: 35px;
+    max-height: 40px;
+  }
+}
+
+/* Remover pointer da palavra LOCAIS */
+.nav-link.disabled-link {
+  cursor: default !important;
+  pointer-events: none;
 }
   
 
