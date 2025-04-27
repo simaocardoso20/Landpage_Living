@@ -1,7 +1,7 @@
 .container {
     display: flex;
     flex-direction: column;
-    align-items: center; /* centrar o conteúdo horizontalmente */
+    align-items: center;
     width: 100%;
     max-width: 1440px;
     margin: 0 auto;
@@ -18,7 +18,7 @@
     position: relative;
     width: 1440px;
     height: 1024px;
-    margin: 0 auto; /* centrar horizontalmente */
+    margin: 0 auto;
     overflow: hidden;
     background: rgba(0, 0, 0, 0.55);
     }
@@ -28,7 +28,7 @@
       position: fixed;
       width: 1440px;
       height: 1024px;
-      object-fit: fill; /* imagem ocupa exatamente as dimensões */
+      object-fit: fill;
       z-index: -1;
       display: block;
       border-radius: 0 !important;
@@ -38,7 +38,7 @@
   .navbar-custom {
     position: fixed !important;
     display: flex;
-    justify-content: space-between; /* Divide a navbar entre a esquerda e a direita */
+    justify-content: space-between;
     align-items: center;
     top: 30px;
     width: 100%;
@@ -51,7 +51,7 @@
     color: rgba(255, 255, 255, 1);
   }
   
-  /* Contêiner da navbar (contém os links e o logo) */
+  /* Contêiner da navbar */
   .navbar-container {
     display: flex;
     justify-content: space-between;
@@ -71,15 +71,15 @@
     align-items: center;
     cursor: pointer;
     left: 300px;
-    justify-content: space-between; /* Divide a navbar entre a esquerda e a direita */
+    justify-content: space-between;
     align-items: center;
     position: fixed;
     top: 40px;
   }
   
   .icon-barras-img {
-    max-width: 59px; /* Define o tamanho máximo do ícone */
-    max-height: 70px; /* Define o tamanho máximo do ícone */
+    max-width: 59px;
+    max-height: 70px; 
   }
   
   /* Estilos para os links da navbar */
@@ -89,7 +89,7 @@
   }
   
   .navbar-nav .nav-link.locais {
-    cursor: default; /* Garante que o cursor será a seta padrão ao passar sobre 'Locais' */
+    cursor: default;
   }
   
   /* Formulário */
@@ -121,7 +121,7 @@
   .form-group {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centraliza cada conjunto de label e select */
+    align-items: center;
     margin-top: 0;
   }
   
@@ -133,7 +133,7 @@
     line-height: 118%;
     color: rgba(30, 30, 30, 1);
     margin-bottom: 5px;
-    text-align: left; /* Garante que o texto do label fique centralizado */
+    text-align: left;
     width: 100%;
     padding-left: 0;
     margin-left: 0;
@@ -152,11 +152,11 @@
     line-height: 118%;
     color: rgba(30, 30, 30, 1);
     font-family: 'Jura', sans-serif;
-    margin: 0 auto; /* Centraliza o select dentro do formulário */
+    margin: 0 auto; 
     appearance: none;
-    background: url('../imagens_figma/Icons/Vector.png') no-repeat right center; /* Substitua 'path/to/your-arrow-image.png' pelo caminho da sua imagem */
-    background-size: 25px 20px; /* Ajuste o tamanho da seta conforme necessário */
-    background-color: #fff; /* Garante que o fundo dos campos seja branco */
+    background: url('../imagens_figma/Icons/Vector.png') no-repeat right center;
+    background-size: 25px 20px;
+    background-color: #fff; 
     background-position: 290px;
   }
   
@@ -174,14 +174,13 @@
     font-weight: 700;
     line-height: 118%;
     font-family: 'Jura';
-    margin: 0 auto; /* Centraliza o botão */
+    margin: 0 auto;
     align-items: center;
     text-align: center;
     margin: 20px auto 0;
   }
 
    /* Imagem ao lado do formulário */
-
   .image-madrid {
   position: fixed;
   top: 150px;
@@ -201,7 +200,7 @@
 
 .cidade-container {
   position: relative;
-  top: 5%; /* Reduzido de 23% para 5% */
+  top: 5%;
   left: 70%;
   transform: translateX(-50%);
   z-index: 10;
@@ -214,7 +213,7 @@
   top: 560px;
   left: 100px;
   width: 465px;
-  height: 206px; /* Adicionado "px" que estava faltando */
+  height: 206px;
   z-index: 1;
   border-radius: 15px;
 }
@@ -252,7 +251,7 @@
   }
 
   html, body {
-    overflow: hidden;
+    overflow-y: auto;
     height: 100%;
     margin: 0;
     padding: 0;

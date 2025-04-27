@@ -21,10 +21,11 @@
     
     <!-- CSS da página -->
     <div class="page-contactos" id="page-contactos">
+      
       <!-- Imagem de fundo (primeiro no HTML!) -->
       <img src="../imagens_figma/caravanasol.png" alt="fundo" class="imagem-page-contactos" />
   
-      <!-- *** MOVIDO O ÍCONE PARA FORA DO NAVBAR *** -->
+
       <div class="icon-barras" style="cursor: pointer;" onclick="window.location.href='../index.html'">
         <img src="../imagens_figma/Icons/iconlinhas.svg" alt="icon barras">
       </div>
@@ -46,8 +47,8 @@
           </div>
         </div>
       </nav>
-    <!-- Texto centralizado -->
 
+    <!-- Texto centralizado -->
     <div class="content-area">
      <div class="texto-page-contactos">
       <p>“Viajar é descobrir que todos estão 
@@ -74,6 +75,7 @@
         <label for="inputMensagem" class="form-label">Mensagem:</label>
         <textarea class="form-control input-altura-mensagem" id="inputMensagem"></textarea>
       </div>
+
       <!-- Botão enviar -->
       <button type="submit" class="rectangle10">Enviar</button>
     </form>
@@ -95,13 +97,14 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script> 
 
     <script>
+
      // Seleciona os elementos do botão e do pop-up
      const formulario = document.getElementById('formulario');
 const popup = document.getElementById('popup');
 const closePopup = document.getElementById('closePopup');
 
 formulario.addEventListener('submit', function(e) {
-  e.preventDefault(); // evita redirecionamento
+  e.preventDefault(); 
   popup.style.display = 'flex';
   popup.style.opacity = '1';
   popup.style.transition = 'opacity 0.3s ease';

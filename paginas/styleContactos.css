@@ -50,10 +50,10 @@ a {
 
 /* Icon barras */
 .icon-barras {
-  position: absolute !important; /* Usa fixed ao invés de absolute para garantir posição */
+  position: absolute !important; 
   top: 30px !important;
   left: 60px !important;
-  z-index: 1000 !important; /* Valor alto de z-index para garantir que fique acima de outros elementos */
+  z-index: 1000 !important; 
   display: block !important;
 }
 
@@ -231,8 +231,6 @@ a {
   margin: 20px auto 0 auto;
 }
 
-/* Media Queries para diferentes tamanhos de tela */
-
 /* Tablets (768px - 1023px) */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .navbar-custom {
@@ -293,28 +291,25 @@ a {
 
 
 @media screen and (min-width: 1024px) and (max-width: 1100px) {
-  /* Ajuste no formulário para dar mais espaço ao texto */
   .form-wrapper {
-    left: 120px; /* Reduzir um pouco para a esquerda */
+    left: 120px;
   }
   
-  /* Ajuste na posição do texto para evitar sobreposição */
   .texto-page-contactos {
-    right: 50px; /* Mover mais para a direita */
-    font-size: 23px; /* Ligeiramente menor */
-    width: 400px; /* Controlar largura máxima */
+    right: 50px; 
+    font-size: 23px; 
+    width: 400px; 
   }
   
   .texto-autor {
-    right: 50px; /* Alinhar com a citação */
-    font-size: 18px; /* Ligeiramente menor */
+    right: 50px; 
+    font-size: 18px; 
   }
 }
 
-/* Correção específica para a faixa problemática de 1040-1067px */
 @media screen and (min-width: 1040px) and (max-width: 1067px) {
   .texto-page-contactos {
-    right: 30px; /* Ainda mais à direita */
+    right: 30px;
     width: 380px;
   }
   
@@ -323,11 +318,10 @@ a {
   }
   
   .form-wrapper {
-    width: 400px; /* Ligeiramente mais estreito */
+    width: 400px; 
     left: 100px;
   }
   
-  /* Ajustes nos elementos internos do formulário */
   .input-altura, 
   .input-altura-mensagem,
   .rectangle10 {
@@ -335,9 +329,7 @@ a {
   }
 }
 
-/* Alternativa: reorganização para telas médias */
 @media screen and (min-width: 1024px) and (max-width: 1100px) {
-  /* Podemos também fazer o texto ficar acima do form em vez de lado a lado */
   .texto-page-contactos {
     top: 15%;
     right: 0;
@@ -421,7 +413,7 @@ a {
   @media screen and (max-width: 767px) {
     .navbar-toggler-icon,
     .navbar-toggler {
-      filter: brightness(0) invert(1); /* Faz o ícone ficar branco */
+      filter: brightness(0) invert(1);
       color: white !important;
       border-color: white !important;
     }
@@ -526,9 +518,7 @@ a {
   }
 }
 
-/* Correção para todas as telas médias onde ocorre sobreposição */
 @media screen and (min-width: 769px) and (max-width: 1100px) {
-  /* Reorganização do layout: texto acima do formulário */
   .texto-page-contactos {
     position: relative;
     top: 80px;
@@ -566,14 +556,12 @@ a {
     z-index: 4;
   }
   
-  /* Ajuste na altura da página para acomodar os elementos reorganizados */
   .page-contactos {
     height: auto;
     min-height: 100vh;
     padding-bottom: 100px;
   }
   
-  /* Ajustes nos elementos do formulário */
   .input-altura, 
   .input-altura-mensagem,
   .rectangle10 {
@@ -581,15 +569,12 @@ a {
     max-width: 338px;
   }
   
-  /* Aumentar navbar para evitar conflito com o texto movido */
   .navbar-custom {
     top: 20px;
   }
 }
 
-/* Ajuste específico para telas um pouco maiores */
 @media screen and (min-width: 936px) and (max-width: 1100px) {
-  /* Podemos manter layout lateral com ajustes de posição */
   .form-wrapper {
     left: 80px;
     top: 160px;
@@ -614,13 +599,11 @@ a {
     transform: translateY(-50%);
   }
   
-  /* Para garantir que o formulário não seja muito grande nessas telas */
   .form-wrapper {
     width: 380px;
   }
 }
 
-/* Refinamento para a faixa mais problemática */
 @media screen and (min-width: 769px) and (max-width: 935px) {
   .page-contactos {
     display: flex;
@@ -642,7 +625,6 @@ a {
   }
 }
 
-/* Para garantir que nossos ajustes não quebrem o layout em celulares */
 @media screen and (max-width: 768px) {
   .texto-page-contactos,
   .texto-autor,
@@ -667,9 +649,7 @@ a {
   }
 }
 
-/* Correção específica para faixa crítica de 1024px a 1067px */
 @media screen and (min-width: 991px) and (max-width: 1068px) {
-  /* Reorganização vertical do layout */
   .page-contactos {
     display: flex;
     flex-direction: column;
@@ -679,7 +659,6 @@ a {
     padding-bottom: 50px;
   }
   
-  /* Reposiciona a navbar */
   .navbar-custom {
     position: absolute;
     top: 50px;
@@ -687,14 +666,12 @@ a {
     width: auto;
   }
   
-  /* Reposiciona o icon-barras */
   .icon-barras {
     position: absolute !important;
     top: 30px !important;
     left: 60px !important;
   }
   
-  /* Reposiciona o texto da citação */
   .texto-page-contactos {
     position: relative;
     top: 150px;
@@ -709,7 +686,6 @@ a {
     z-index: 5;
   }
   
-  /* Reposiciona o texto do autor */
   .texto-autor {
     position: relative;
     top: 160px;
@@ -723,7 +699,6 @@ a {
     z-index: 5;
   }
   
-  /* Reposiciona o formulário para ficar abaixo dos textos */
   .form-wrapper {
     position: relative;
     top: 180px;
@@ -735,9 +710,7 @@ a {
   }
 }
 
-/* Para garantir que a transição do layout seja suave, adicione este breakpoint adjacente */
 @media screen and (min-width: 1068px) and (max-width: 1100px) {
-  /* Ajusta o layout lateral para evitar sobreposições */
   .form-wrapper {
     left: 100px;
     width: 400px;
@@ -754,9 +727,7 @@ a {
   }
 }
 
-/* Correção específica para faixa de 936px a 1023px */
 @media screen and (min-width: 936px) and (max-width: 1159px) {
-  /* Reorganização vertical do layout */
   .page-contactos {
     display: flex;
     flex-direction: column;
@@ -766,7 +737,6 @@ a {
     padding-bottom: 50px;
   }
   
-  /* Texto da citação */
   .texto-page-contactos {
     position: relative;
     top: 150px;
@@ -782,7 +752,6 @@ a {
     font-size: 22px;
   }
   
-  /* Texto do autor */
   .texto-autor {
     position: relative;
     top: 160px;
@@ -797,7 +766,6 @@ a {
     font-size: 18px;
   }
   
-  /* Formulário abaixo dos textos */
   .form-wrapper {
     position: relative;
     top: 170px;
@@ -808,14 +776,12 @@ a {
     z-index: 4;
   }
   
-  /* Ajuste nos elementos do formulário para garantir que caibam */
   .input-altura, 
   .input-altura-mensagem,
   .rectangle10 {
     width: 320px;
   }
   
-  /* Navbar permanece no topo */
   .navbar-custom {
     position: absolute;
     top: 50px;
@@ -824,7 +790,6 @@ a {
     font-size: 20px;
   }
   
-  /* Icon barras mantém sua posição */
   .icon-barras {
     position: absolute !important;
     top: 20px !important;
@@ -833,7 +798,6 @@ a {
 }
 
 @media screen and (max-width: 1067px) {
-  /* Alinha os itens da navbar em uma coluna quando a tela for pequena */
   .navbar-collapse {
     display: flex;
     flex-direction: column; 

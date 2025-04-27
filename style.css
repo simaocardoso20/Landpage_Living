@@ -182,7 +182,7 @@
   /* SECTION ACOMODAÇÃO - COM GRID */
   .section-acomodacao {
     display: grid;
-    grid-template-columns: 0.9fr 1.1fr; /* ou 40% 60%, conforme preferires */
+    grid-template-columns: 0.9fr 1.1fr;
     width: 100%;
     background-color: #000;
   }
@@ -208,7 +208,6 @@
     padding: 40px 20px;
     position: relative;
     height: 515px;
-  
   }
 
   .texto-coluna5 {
@@ -441,7 +440,6 @@
   }
 }
 
-
   @media (max-width: 768px) {
     /* Navegação mobile */
     .navbar-nav {
@@ -482,30 +480,27 @@
         display: inline-block;
       }
     
-      /* Força a barra de navegação a ficar por cima do conteúdo */
       .navbar-custom {
         width: 100%;
         position: fixed;
         background-color: transparent;
       }
       
-      /* Ajuste para que o restante do conteúdo seja empurrado para baixo */
       .cabecalho-hero {
         display: flex;
         flex-direction: column;
       }
-      
-      /* Ajusta a posição do botão toggle */
+    
       .navbar-toggler {
         margin-left: auto;
       }
     }
 
     .navbar-collapse.show ~ .cabecalho-hero {
-      margin-top: 80px; /* Ajuste de acordo com a altura da navbar */
+      margin-top: 80px; 
     }
     
-    /* Grid responsivo para mobile */
+    
     .section-hero {
       grid-template-columns: 1fr;
     }
@@ -533,18 +528,18 @@
       text-align: center;
     }
     
-    /* Seções com 2 colunas viram 1 coluna */
+   
     .section-acomodacao,
     .section-locais {
       grid-template-columns: 1fr;
     }
     
     .section-locais-texto {
-      order: 2; /* Move o texto abaixo da imagem */
+      order: 2; 
     }
     
     .coluna7 {
-      order: 1; /* Move a imagem acima do texto */
+      order: 1; 
     }
     
     .imagem-coluna4,
@@ -600,16 +595,12 @@
     }
   }
 
-
-  /* Centralização dos retângulos em todas as resoluções */
 .rectangle-2, .rectangle-3 {
   margin-left: auto;
   margin-right: auto;
 }
 
-/* Ajustes específicos para telas menores */
 @media (max-width: 768px) {
-  /* Garante que os containers dos botões centralizem seu conteúdo */
   .coluna5, .section-locais-texto {
     display: flex;
     flex-direction: column;
@@ -618,15 +609,12 @@
     text-align: center;
   }
   
-  /* Ajuste específico para garantir centralização mesmo quando houver outros elementos */
+
   .rectangle-2, .rectangle-3 {
     align-self: center;
-    /* Se necessário, remova posicionamentos absolutos que possam interferir */
   }
   
-  /* Ajuste para que as setas não interfiram no layout central */
   .icon-seta1, .icon-seta2 {
     position: absolute;
-    /* Mantém posicionamento absoluto mas não interfere na centralização dos botões */
   }
 }

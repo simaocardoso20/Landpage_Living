@@ -51,6 +51,7 @@
 
      <!-- Formulário - fora da navbar -->
 <div class="form-select">
+
     <!-- País -->
     <div class="form-group">
         <label class="form-titulo-label" for="pais">Escolha o país:</label>
@@ -118,11 +119,11 @@
         const portoContainer = document.getElementById('portoContainer');
         const madridContainer = document.getElementById('madridContainer');
     
-        // Esconde todos
+       
         portoContainer.style.display = 'none';
         madridContainer.style.display = 'none';
     
-        // Mostra o correspondente
+        
         if (paisSelecionado === 'pt' && cidadeSelecionada === 'porto') {
             portoContainer.style.display = 'block';
         } else if (paisSelecionado === 'es' && cidadeSelecionada === 'madrid') {
